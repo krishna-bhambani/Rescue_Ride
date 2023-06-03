@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h1>Sign Up</h1>
+        <form action="connect.php" method="post">
+          <div class="form-group">
+            <label for="hospital_name">Hospital Name</label>
+            <input type="text" class="form-control" id="hospital_name" name="hospital_name" required>
+          </div>
+          <div class="form-group">
+            <label for="email_id">Email ID</label>
+            <input type="email" class="form-control" id="email_id" name="email_id" required>
+          </div>
+          <div class="form-group">
+            <label for="location_latitude">Location (Latitude)</label>
+            <input type="number" class="form-control" id="location_latitude" name="location_latitude" required>
+          </div>
+          <div class="form-group">
+            <label for="location_longitude">Location (Longitude)</label>
+            <input type="number" class="form-control" id="location_longitude" name="location_longitude" required>
+          </div>
+          <div class="form-group">
+            <label for="contact_no">Contact No.</label>
+            <input type="number" class="form-control" id="contact_no" name="contact_no" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

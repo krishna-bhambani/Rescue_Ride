@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login SignUp</title>
+    <link rel="stylesheet" type="text/css" href="loginStyle.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- It will redirect to the Home Page after submitting the form -->
+    <script>
+      $(document).ready(function () {
+        $("form").submit(function () {
+          alert("Thank You for Registering!");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="form-box">
+      <div class="button-box">
+        <div id="btn"></div>
+        <button
+          type="button"
+          class="toggle-btn"
+          id="log"
+          onclick="login()"
+          style="color: #fff"
+        >
+          Log In
+        </button>
+        <button type="button" class="toggle-btn" id="reg" onclick="register()">
+          Register
+        </button>
+      </div>
+      <div class="social-icons">
+        <img src="images/icon/fb2.png" />
+        <img src="images/icon/insta2.png" />
+        <img src="images/icon/tt2.png" />
+      </div>
+
+      <!-- Login Form -->
+      <form id="login" class="input-group" >
+        <div class="inp">
+          <input
+            type="text"
+            id="email"
+            class="input-field"
+            placeholder="Email or Phone Number"
+            style="width: 88%; border: none"
+            required="required"
+          />
+        </div>
+        <div class="inp">
+          <input
+            type="password"
+            id="password"
+            class="input-field"
+            placeholder="Password"
+            style="width: 88%; border: none"
+            required="required"
+          />
+        </div>
+        <input type="checkbox" class="check-box" />Remember Password
+        <br>
+        <button type="submit" class="submit-btn">Log In</button>
+      </form>
+
+      <div class="other" id="other">
+        <div class="instead">
+          <h3>or</h3>
+          <br>
+        </div>
+        <br>
+        <button class="connect" onclick="google()">
+          <span>Sign in with Google</span>
+        </button>
+      </div>
+
+      <!-- Registration Form -->
+      <form id="register" class="input-group">
+        <input
+          type="text"
+          class="input-field"
+          placeholder="Hospital Name"
+          required="required"
+        />
+        <input
+          type="number"
+          class="input-field"
+          placeholder="Location latitude"
+          required="required"
+        />
+        <input
+          type="number"
+          class="input-field"
+          placeholder="Location longitude"
+          required="required"
+        />
+        <input
+          type="email"
+          class="input-field"
+          placeholder="Email Address"
+          required="required"
+        />
+        <input
+          type="number"
+          class="input-field"
+          placeholder="Contact Number"
+          required="required"
+        />
+        <input
+          type="password"
+          class="input-field"
+          placeholder="Create Password"
+          name="psame"
+          required="required"
+        />
+        <input
+          type="password"
+          class="input-field"
+          placeholder="Confirm Password"
+          name="psame"
+          required="required"
+        />
+        <input
+          type="checkbox"
+          class="check-box"
+          id="chkAgree"
+          onclick="goFurther()"
+        />I agree to the Terms & Conditions
+        <button type="submit" id="btnSubmit" class="submit-btn reg-btn">
+          Register
+        </button>
+      </form>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
